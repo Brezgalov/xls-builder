@@ -1,0 +1,24 @@
+{
+    "name": "brezgalov/xls-builder",
+    "description": "port transit common utils",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Brezgalov",
+            "email": "oleg.brezgalov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-mbstring": "*",
+        "phpoffice/phpspreadsheet": "^1.8",
+        "yiisoft/yii2": "~2.0.14",
+        "dkapusta/dompdf": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brezgalov\\XlsBuilder\\": "src/",
+        }
+    }
+}
