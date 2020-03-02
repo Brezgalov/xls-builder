@@ -27,7 +27,12 @@ abstract class BaseTemplateBuilder extends Model
     /**
      * @var string путь к view для письма
      */
-    public $mailView = '@common/files/registry_email_text.php';
+    public $mailView;
+
+    /**
+     * @var string
+     */
+    public $defaultMailSubject = 'Пересылка докуметов';
 
     /**
      * @var string css для правки стилей в pdf
@@ -195,7 +200,7 @@ abstract class BaseTemplateBuilder extends Model
     public function getMailSetup()
     {
         return [
-            'title' => 'Пересылка докуметов из сервиса Зерно',
+            'title' => $this->defaultMailSubject,
             'text'  => '',
         ];
     }
